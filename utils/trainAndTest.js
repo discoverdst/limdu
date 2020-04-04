@@ -5,16 +5,13 @@
  * @since 2013-06
  */
 
-var fs = require('fs');
 var _ = require('underscore')._;
 var hash = require('./hash');
 var PrecisionRecall = require("./PrecisionRecall");
 var list = require('./list');
 var async = require('async');
 var log_file = "/tmp/logs/" + process.pid;
-console.vlog = function(data) {
-    fs.appendFileSync(log_file, data + '\n', 'utf8')
-};
+
 
 /**
  * A short light-weight test function. Tests the given classifier on the given dataset, and 

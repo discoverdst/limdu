@@ -45,48 +45,6 @@ exports.toARFF = function(dataset, relationName, featureExtractor) {
 	return toARFFLocal(dataset, relationName, featureLookupTable);
 }
 
-/**
- * convert many dataset to Weka ARFF files.
- * @param mapFileNameToDataset an array of samples in the format {input: {feature1: xxx, feature2: yyy, ...}, output: [1,2,3]}
- * @return an ARFF file. 
- */
-exports.toARFFs = function(outputFolder, mapFileNameToDataset, featureExtractor) {
-	if (!featureExtractor) featureExtractor=_.identity;
-	var featureLookupTable = new FeaturesUnit.FeatureLookupTable();
-	
-	// Extract the input attributes (- features):
-	for (var relationName in mapFileNameToDataset) {
-		mapFileNameToDataset[relationName].forEach(function(datum) {
-			datum.input = featureExtractor(datum.input, {});
-			if (!_.isObject(datum.input))
-				throw new Error("Expected feature vector to be a hash, but found "+JSON.stringify(datum.input));
-			featureLookupTable.addFeatures(datum.input);
-		});
-	}
-	
-	
-	// Extract the target attributes (- classes):
-	for (var relationName in mapFileNameToDataset) {
-		mapFileNameToDataset[relationName].forEach(function(datum) {
-			if (!_.isArray(datum.output))
-				datum.output = [datum.output];
-			datum.output = datum.output.map(function(anOutput) {
-				return _.isString(anOutput)? anOutput: JSON.stringify(anOutput);
-			});
-			featureLookupTable.addFeatures(datum.output);
-		});
-	}
-	
-
-	//console.dir(featureLookupTable);
-
-	var fs = require('fs');
-	for (var relationName in mapFileNameToDataset) {
-		fs.writeFileSync(outputFolder+"/"+relationName+".arff", 
-			toARFFLocal(mapFileNameToDataset[relationName], relationName, featureLookupTable));
-	}
-}
-
 
 /**
  * convert a single dataset to Weka ARFF string.

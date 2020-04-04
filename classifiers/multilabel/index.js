@@ -5,9 +5,7 @@ module.exports = {
 	MulticlassSegmentation: require('./MulticlassSegmentation'),
 	Homer:                  require('./Homer'),
 	MetaLabeler:            require('./MetaLabeler'),
-	CrossLanguageModel:     require('./CrossLangaugeModelClassifier'),
 	ThresholdClassifier:    require('./ThresholdClassifier'),
-	Adaboost:  				require('./Adaboost'),
 	PartialClassification:  require('./PartialClassification'),
 }
 

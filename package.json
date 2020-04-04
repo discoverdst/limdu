@@ -1,33 +1,36 @@
 {
-  "name": "limdu",
-  "description": "A machine learning framework for Node.js. Supports multi-level classification and online learning.",
-  "version": "0.9.4",
-  "author": "Erel Segal-haLevi <erelsgl@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/erelsgl/limdu.git"
+  "_from": "limdu",
+  "_id": "limdu@0.9.4",
+  "_inBundle": false,
+  "_integrity": "sha512-H0528LLGi4iIf0AslLu3mKhIbg8BdGZUqeHS7AIx3j5S+iMSgVp+ctUOjrWlraWaPB9AuAvS7inDsS/Ct2urPg==",
+  "_location": "/limdu",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "limdu",
+    "name": "limdu",
+    "escapedName": "limdu",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "engines": {
-    "node": ">=0.12"
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/limdu/-/limdu-0.9.4.tgz",
+  "_shasum": "70e24c4f73d0f83f8499e034b3eba9dd5cd2beba",
+  "_spec": "limdu",
+  "_where": "/Users/mpedersen/DST_Projects/projects/mobile/dst",
+  "author": {
+    "name": "Erel Segal-haLevi",
+    "email": "erelsgl@gmail.com"
   },
-  "dependencies": {
-    "async": "*",
-    "brain.js": "^1.0.5",
-    "graph-paths": "latest",
-    "languagemodel": "latest",
-    "sprintf-js": "^1.1.2",
-    "svm": "*",
-    "temp": "*",
-    "underscore": "*",
-    "wordsworth": "*"
+  "bugs": {
+    "url": "https://github.com/erelsgl/limdu/issues"
   },
-  "devDependencies": {
-    "mocha": ">=1.0.0",
-    "should": ">=0.6.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
+  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Erel Segal-Halevi",
@@ -44,6 +47,27 @@
       "name": "junchaowu"
     }
   ],
+  "dependencies": {
+    "async": "*",
+    "brain.js": "^1.0.5",
+    "graph-paths": "latest",
+    "languagemodel": "latest",
+    "sprintf-js": "^1.1.2",
+    "svm": "*",
+    "temp": "*",
+    "underscore": "*",
+    "wordsworth": "*"
+  },
+  "deprecated": false,
+  "description": "A machine learning framework for Node.js. Supports multi-level classification and online learning.",
+  "devDependencies": {
+    "mocha": ">=1.0.0",
+    "should": ">=0.6.0"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "homepage": "https://github.com/erelsgl/limdu#readme",
   "keywords": [
     "classifier",
     "classification",
@@ -64,5 +88,14 @@
     "binary relevance",
     "one vs all"
   ],
-  "license": "LGPL"
+  "license": "LGPL",
+  "name": "limdu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erelsgl/limdu.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "0.9.4"
 }

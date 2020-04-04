@@ -1,7 +1,6 @@
 var hash = require("../../utils/hash");
 var sprintf = require("sprintf-js").sprintf;
 var _ = require("underscore")._;
-var util = require("util");
 var multilabelutils = require('./multilabelutils');
 
 
